@@ -11,12 +11,16 @@ int main()
     list.add_head(&list, 30);
 
     printf("List after adding 30, 20, 10:\n");
-    print_list(&list);
+    list.print(&list);
+
+    printf("List after reverse:\n");
+    list.reverse(&list);
+    list.print(&list);
 
     list.remove_head(&list);
     printf("List after removing head:\n");
-    print_list(&list);
+    list.print(&list);
 
-    free_list(&list);
+    list.free(&list);
     return 0;
 }
